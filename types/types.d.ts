@@ -1,5 +1,5 @@
 
-declare module 'local-ml-random-forest' {
+declare module 'ipa-ml-random-forest' {
     import Matrix from "ml-matrix";
     import { DecisionTreeClassifier } from 'ml-cart';
     import { DecisionTreeRegression } from 'ml-cart';
