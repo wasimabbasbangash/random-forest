@@ -1,6 +1,8 @@
-import Matrix from "ml-matrix";
 
-declare module 'ml-random-forest' {
+declare module 'local-ml-random-forest' {
+    import Matrix from "ml-matrix";
+    import { DecisionTreeClassifier } from 'ml-cart';
+    import { DecisionTreeRegression } from 'ml-cart';
 
     interface RandomForestBaseOptions {
         /**the number of features used on each estimator.
@@ -22,11 +24,20 @@ declare module 'ml-random-forest' {
         isClassifier: boolean,
         /** the way to calculate the prediction from estimators, "mean" and "median" are supported. */
         selectionMethod?: 'mean' | 'median',
-    };
+    }
 
     type Estimator = DecisionTreeClassifier | DecisionTreeRegression;
 
-    class RandomForestBase extends RandomForestBaseOptions {
+    class RandomForestBase implements RandomForestBaseOptions {
+        maxFeatures: number;
+        replacement: boolean;
+        nEstimators: number;
+        seed: number;
+        useSampleBagging: boolean;
+        treeOptions: object;
+        noOOB: boolean;
+        isClassifier: boolean;
+        selectionMethod?: "mean" | "median";
         n?: number;
         indexes?: number[][];
         estimators?: Estimator[];

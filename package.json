@@ -1,5 +1,5 @@
 {
-  "name": "ml-random-forest",
+  "name": "ipa-ml-random-forest",
   "version": "2.0.2",
   "description": "Random forest for classification and regression",
   "main": "random-forest.js",

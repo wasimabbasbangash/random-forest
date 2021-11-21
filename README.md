@@ -8,7 +8,7 @@ Random forest for classification and regression.
 
 ## Installation
 
-`npm i ml-random-forest`
+`npm i ipa-ml-random-forest`
 
 ## [API Documentation](https://mljs.github.io/random-forest/)
 
@@ -18,7 +18,7 @@ Random forest for classification and regression.
 
 ```js
 import IrisDataset from 'ml-dataset-iris';
-import { RandomForestClassifier as RFClassifier } from 'ml-random-forest';
+import { RandomForestClassifier as RFClassifier } from 'ipa-ml-random-forest';
 
 const trainingSet = IrisDataset.getNumbers();
 const predictions = IrisDataset.getClasses().map((elem) =>
@@ -42,7 +42,7 @@ const confusionMatrix = classifier.getConfusionMatrix();
 ### As regression
 
 ```js
-import { RandomForestRegression as RFRegression } from 'ml-random-forest';
+import { RandomForestRegression as RFRegression } from 'ipa-ml-random-forest';
 
 const dataset = [
   [73, 80, 75, 152],
@@ -97,8 +97,8 @@ const result = regression.predict(trainingSet);
 [MIT](./LICENSE)
 
 [npm-image]: https://img.shields.io/npm/v/ml-random-forest.svg
-[npm-url]: https://npmjs.org/package/ml-random-forest
+[npm-url]: https://npmjs.org/package/ipa-ml-random-forest
 [ci-image]: https://github.com/mljs/random-forest/workflows/Node.js%20CI/badge.svg?branch=master
 [ci-url]: https://github.com/mljs/random-forest/actions?query=workflow%3A%22Node.js+CI%22
 [download-image]: https://img.shields.io/npm/dm/ml-random-forest.svg
-[download-url]: https://npmjs.org/package/ml-random-forest
+[download-url]: https://npmjs.org/package/ipa-ml-random-forest
